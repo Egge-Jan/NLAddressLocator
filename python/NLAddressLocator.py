@@ -79,7 +79,7 @@ else:
         address['Municipality'] = (detail['gemeentenaam'])
         address['Province'] = (detail['provincienaam'])
         # use a regular expression to extract the X and Y coordinates (in RD/EPSG:28992) from the value 'centroide_rd'
-        coords = re.findall('\d+[.]?\d+', detail['centroide_rd'])
+        coords = re.findall(r'\d+[.]?\d+', detail['centroide_rd'])
         address['RD_X_coord'] = (coords[0])
         address['RD_Y_coord'] = (coords[1])
 
